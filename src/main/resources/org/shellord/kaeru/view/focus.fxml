@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.shellord.kaeru.controller.FocusController"
+      styleClass="screen-root focus-screen-root"
+      spacing="0">
+
+    <Canvas fx:id="sceneCanvas" width="360" height="80"/>
+
+    <VBox styleClass="body-pad" spacing="8" VBox.vgrow="ALWAYS">
+        <padding><Insets top="10" right="12" bottom="8" left="12"/></padding>
+
+        <!-- current task bar -->
+        <HBox styleClass="ctbar" spacing="8" alignment="CENTER_LEFT">
+            <Label fx:id="ctArrowLabel" text="▶" styleClass="ctbar-arrow"/>
+            <Label fx:id="currentTaskLabel" text="—" styleClass="ctbar-name" HBox.hgrow="ALWAYS"/>
+            <Label fx:id="ctRound" text="1/4" styleClass="ctbar-round"/>
+        </HBox>
+
+        <!-- ══ FOCUS VIEW ══ -->
+        <VBox fx:id="focusView" spacing="10" alignment="CENTER" VBox.vgrow="ALWAYS">
+
+            <StackPane fx:id="timerContainer" prefWidth="200" prefHeight="200" alignment="CENTER">
+                <Circle fx:id="timerTrack" radius="90" styleClass="timer-track" fill="transparent"/>
+                <Arc fx:id="timerArc" radiusX="90" radiusY="90"
+                     startAngle="90" length="-360" type="OPEN"
+                     styleClass="timer-progress" fill="transparent"/>
+                <VBox alignment="CENTER" spacing="2">
+                    <Label fx:id="timerLabel" text="25:00" styleClass="timer-text-big"/>
+                    <Label text="remaining" styleClass="timer-sub"/>
+                </VBox>
+            </StackPane>
+
+            <HBox alignment="CENTER" spacing="16">
+                <Button fx:id="pauseBtn" text="⏸  pause"
+                        onAction="#onPauseClick" styleClass="pause-btn"/>
+                <Button text="end early" onAction="#onEndEarlyClick" styleClass="end-link-btn"/>
+            </HBox>
+
+            <VBox spacing="4" fillWidth="true">
+                <Label text="tasks" styleClass="slabel"/>
+                <VBox fx:id="taskListContainer" spacing="3"/>
+            </VBox>
+
+        </VBox>
+
+        <!-- ══ BREAK VIEW ══ -->
+        <VBox fx:id="breakView" spacing="10" alignment="CENTER"
+              visible="false" managed="false" VBox.vgrow="ALWAYS">
+
+            <Label text="step away ☕  you earned it" styleClass="break-msg"/>
+
+            <StackPane fx:id="breakContainer" prefWidth="200" prefHeight="200" alignment="CENTER">
+                <Circle fx:id="breakTrack" radius="90" styleClass="break-track" fill="transparent"/>
+                <Arc fx:id="breakArc" radiusX="90" radiusY="90"
+                     startAngle="90" length="-360" type="OPEN"
+                     styleClass="break-progress" fill="transparent"/>
+                <VBox alignment="CENTER" spacing="2">
+                    <Label fx:id="breakTimerLabel" text="05:00" styleClass="break-timer-text-big"/>
+                    <Label text="break" styleClass="break-timer-sub"/>
+                </VBox>
+            </StackPane>
+
+            <Label fx:id="breakNextLabel"   text="up next: —"   styleClass="break-next"/>
+            <Label fx:id="breakRoundsLabel" text="round 1 done" styleClass="break-rounds"/>
+
+            <HBox alignment="CENTER" spacing="16">
+                <Button text="▶  skip break" onAction="#onSkipBreakClick" styleClass="pause-btn"/>
+                <Button text="end session"   onAction="#onEndEarlyClick"  styleClass="end-link-btn"/>
+            </HBox>
+
+        </VBox>
+
+        <!-- stats bar -->
+        <HBox styleClass="stats-bar" alignment="CENTER">
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                <Label fx:id="todayTimeLabel" text="0m" styleClass="stat-val"/>
+                <Label text="today" styleClass="stat-lbl"/>
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                <Label fx:id="roundsDoneLabel" text="0" styleClass="stat-val"/>
+                <Label text="done" styleClass="stat-lbl"/>
+            </VBox>
+        </HBox>
+
+        <!-- ── audio controls ── -->
+        <HBox styleClass="audio-bar" alignment="CENTER_LEFT" spacing="6">
+            <Label fx:id="trackLabel" text="♪  —" styleClass="audio-track"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="muteBtn" text="♪" onAction="#onMuteClick" styleClass="audio-btn"/>
+            <Slider fx:id="volSlider" min="0" max="1" value="0.5"
+                    prefWidth="70" styleClass="audio-slider"/>
+            <Button fx:id="skipBtn" text="⏭" onAction="#onSkipClick" styleClass="audio-btn"/>
+        </HBox>
+
+    </VBox>
+</VBox>

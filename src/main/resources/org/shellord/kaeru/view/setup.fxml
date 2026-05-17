@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.shellord.kaeru.controller.SetupController"
+      styleClass="screen-root"
+      spacing="0">
+
+    <!-- pixel art scene canvas -->
+    <Canvas fx:id="setupCanvas" width="480" height="70"/>
+
+    <VBox styleClass="body-pad" spacing="6">
+        <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+
+        <VBox styleClass="panel" spacing="4">
+            <Label text="what are you working on?" styleClass="slabel"/>
+            <TextField fx:id="taskNameInput" promptText="e.g. Study for exams..."
+                       styleClass="text-input"/>
+        </VBox>
+
+        <HBox spacing="6">
+
+            <VBox styleClass="panel" spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="focus" styleClass="slabel"/>
+                <HBox spacing="4">
+                    <ToggleButton fx:id="focus15Btn" text="15m" styleClass="pill"/>
+                    <ToggleButton fx:id="focus25Btn" text="25m" styleClass="pill"/>
+                    <ToggleButton fx:id="focus50Btn" text="50m" styleClass="pill"/>
+                    <ToggleButton fx:id="focusCustomBtn" text="..." styleClass="pill"/>
+                </HBox>
+                <TextField fx:id="customFocusField" promptText="enter minutes..."
+                           styleClass="text-input" prefWidth="140" visible="false" managed="false"/>
+
+                <Label text="break" styleClass="slabel"/>
+                <HBox spacing="4">
+                    <ToggleButton fx:id="break5Btn"  text="5m"  styleClass="pill"/>
+                    <ToggleButton fx:id="break10Btn" text="10m" styleClass="pill"/>
+                    <ToggleButton fx:id="break15Btn" text="15m" styleClass="pill"/>
+                    <ToggleButton fx:id="breakCustomBtn" text="..." styleClass="pill"/>
+                </HBox>
+                <TextField fx:id="customBreakField" promptText="enter minutes..."
+                           styleClass="text-input" prefWidth="140" visible="false" managed="false"/>
+
+                <Label text="rounds" styleClass="slabel"/>
+                <HBox spacing="4">
+                    <ToggleButton fx:id="rounds2Btn" text="2" styleClass="pill"/>
+                    <ToggleButton fx:id="rounds4Btn" text="4" styleClass="pill"/>
+                    <ToggleButton fx:id="rounds6Btn" text="6" styleClass="pill"/>
+                    <ToggleButton fx:id="roundsCustomBtn" text="..." styleClass="pill"/>
+                </HBox>
+                <TextField fx:id="customRoundsField" promptText="enter rounds..."
+                           styleClass="text-input" prefWidth="140" visible="false" managed="false"/>
+            </VBox>
+
+            <VBox styleClass="panel" spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="tasks" styleClass="slabel"/>
+                <VBox fx:id="taskListContainer" spacing="2"/>
+                <HBox spacing="4">
+                    <TextField fx:id="newTaskField" promptText="add task..."
+                               styleClass="text-input" HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="addTaskConfirmBtn" text="+"
+                            onAction="#onAddTaskClick" styleClass="add-task-btn"/>
+                </HBox>
+            </VBox>
+
+        </HBox>
+
+        <Button text="▶  start session"
+                onAction="#onStartClick"
+                styleClass="start-btn"
+                maxWidth="Infinity"/>
+
+    </VBox>
+</VBox>

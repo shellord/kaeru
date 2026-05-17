@@ -1,0 +1,7 @@
+[
+  { "id": "lofi_rain",     "title": "lofi rain",        "file": "lofi_rain.mp3"     },
+  { "id": "lofi_cafe",     "title": "jazz café",         "file": "lofi_cafe.mp3"     },
+  { "id": "lofi_lanterns", "title": "hanging lanterns",  "file": "lofi_lanterns.mp3" },
+  { "id": "lofi_snow",     "title": "first snow",        "file": "lofi_snow.mp3"     },
+  { "id": "lofi_waves",    "title": "waves",             "file": "lofi_waves.mp3"    }
+]

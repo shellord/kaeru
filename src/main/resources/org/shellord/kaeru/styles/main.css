@@ -1,0 +1,463 @@
+/* ── KAERU FOCUS — main.css ── */
+
+/* ── Root ── */
+.screen-root {
+    -fx-background-color: #110d08;
+    -fx-pref-width: 480px;
+    -fx-pref-height: 560px;
+}
+
+/* ── Scene header ── */
+.scene-header-focus {
+    -fx-background-color: #c4846a;
+    -fx-pref-height: 70px;
+}
+.scene-header-break {
+    -fx-background-color: #3a3860;
+    -fx-pref-height: 70px;
+}
+
+/* ── Body ── */
+.body-pad {
+    -fx-background-color: #110d08;
+}
+
+/* ── Section label ── */
+.slabel {
+    -fx-text-fill: #6a5030;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.empty-label {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Panel ── */
+.panel {
+    -fx-background-color: rgba(20, 14, 8, 0.93);
+    -fx-border-color: #3a2a18;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-padding: 10 12 10 12;
+}
+
+/* ── Text input ── */
+.text-input {
+    -fx-background-color: #120e08;
+    -fx-border-color: #3a2a18;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #e8c890;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-prompt-text-fill: #3a2a18;
+    -fx-padding: 6 8 6 8;
+}
+.text-input:focused {
+    -fx-border-color: #c8904a;
+}
+
+/* ── Pills (ToggleButton) ── */
+.pill {
+    -fx-background-color: #0a0806;
+    -fx-border-color: #3a2a18;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #6a5030;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+.pill:selected {
+    -fx-background-color: #2a1e0e;
+    -fx-border-color: #c8904a;
+    -fx-text-fill: #e8b870;
+}
+.pill:hover {
+    -fx-border-color: #5a4030;
+}
+
+/* ── Task rows ── */
+.task-row {
+    -fx-background-color: #120e08;
+    -fx-border-color: #1e1408;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 8 6 8;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+.task-row:hover {
+    -fx-border-color: #5a4030;
+}
+.task-done {
+    -fx-opacity: 0.4;
+}
+.task-name-label {
+    -fx-text-fill: #a08060;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-max-width: Infinity;
+    -fx-hgrow: ALWAYS;
+}
+/* ── Custom checkbox indicator (focus screen) ── */
+.custom-cb {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-min-width: 18px;
+}
+.custom-cb-done {
+    -fx-text-fill: #6a8040;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-min-width: 18px;
+}
+.task-name-label {
+    -fx-text-fill: #a08060;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.task-name-done {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-strikethrough: true;
+}
+.task-delete-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 0 4 0 4;
+}
+.task-delete-btn:hover {
+    -fx-text-fill: #8a4030;
+}
+
+/* ── Add task button ── */
+.add-task-btn {
+    -fx-background-color: #2a1e0e;
+    -fx-border-color: #c8904a;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 4 10 4 10;
+}
+
+/* ── Start button ── */
+.start-btn {
+    -fx-background-color: #2a1e0e;
+    -fx-border-color: #c8904a;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+    -fx-cursor: hand;
+}
+.start-btn:hover  { -fx-background-color: #3a2a14; }
+.start-btn:pressed { -fx-scale-x: 0.98; -fx-scale-y: 0.98; }
+
+/* ── Secondary button ── */
+.sec-btn {
+    -fx-background-color: #120e08;
+    -fx-border-color: #3a2a18;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #6a5030;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+    -fx-cursor: hand;
+}
+.sec-btn:hover { -fx-border-color: #5a4030; -fx-text-fill: #8a6040; }
+
+/* ── Mode badge ── */
+.mode-badge {
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-padding: 3 10 3 10;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+.focus-badge {
+    -fx-background-color: #2a1e0e;
+    -fx-border-color: #c8904a;
+    -fx-text-fill: #e8b870;
+}
+.break-badge {
+    -fx-background-color: #0f1520;
+    -fx-border-color: #7a9ab0;
+    -fx-text-fill: #a0c8e0;
+}
+.round-info {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Current task bar ── */
+.ctbar {
+    -fx-background-color: #1a1208;
+    -fx-border-color: #c8904a;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 6 10 6 10;
+}
+.ctbar-arrow {
+    -fx-text-fill: #c8904a;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.ctbar-name {
+    -fx-text-fill: #e8c890;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Timer ring (Circle track + Arc progress) ── */
+.timer-track {
+    -fx-stroke: #1e1608;
+    -fx-stroke-width: 12px;
+    -fx-stroke-type: centered;
+}
+.timer-progress {
+    -fx-stroke: #c8904a;
+    -fx-stroke-width: 12px;
+    -fx-stroke-line-cap: round;
+}
+.timer-text {
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 30px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-font-weight: bold;
+}
+.timer-sub {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Break ring ── */
+.break-track {
+    -fx-stroke: #1a1828;
+    -fx-stroke-width: 12px;
+    -fx-stroke-type: centered;
+}
+.break-progress {
+    -fx-stroke: #7a9ab0;
+    -fx-stroke-width: 12px;
+    -fx-stroke-line-cap: round;
+}
+.break-timer-text {
+    -fx-text-fill: #a0c8e0;
+    -fx-font-size: 30px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-font-weight: bold;
+}
+.break-timer-sub {
+    -fx-text-fill: #2a2838;
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Break labels ── */
+.break-msg {
+    -fx-text-fill: #5a6a8a;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.break-next {
+    -fx-text-fill: #5a6a8a;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-background-color: #0f1520;
+    -fx-border-color: #1a2030;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 14 6 14;
+}
+.break-rounds {
+    -fx-text-fill: #2a2838;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Pause button ── */
+.pause-btn {
+    -fx-background-color: #2a1e0e;
+    -fx-border-color: #c8904a;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+.pause-btn:hover  { -fx-background-color: #3a2a14; }
+.pause-btn:pressed { -fx-scale-x: 0.95; -fx-scale-y: 0.95; }
+
+/* ── End link button ── */
+.end-link-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 15px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-padding: 2 0 2 0;
+}
+.end-link-btn:hover { -fx-text-fill: #5a4030; }
+
+/* ── Stats bar ── */
+.stats-bar {
+    -fx-border-color: #1e1408 transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 6 0 0 0;
+}
+.stat-val {
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.stat-lbl {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Summary ── */
+.summary-title {
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+.stat-card {
+    -fx-background-color: #120e08;
+    -fx-border-color: #1e1408;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8 10 8 10;
+    -fx-alignment: center;
+}
+.stat-card-val {
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 18px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.stat-card-lbl {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 12px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+.summary-task-row {
+    -fx-padding: 5 0 5 0;
+    -fx-border-color: transparent transparent #1e1408 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.check-done { -fx-text-fill: #6a8040; -fx-font-size: 15px; }
+.check-miss { -fx-text-fill: #5a4030; -fx-font-size: 15px; }
+.task-done-name {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+    -fx-strikethrough: true;
+}
+.task-miss-name {
+    -fx-text-fill: #8a6030;
+    -fx-font-size: 16px;
+    -fx-font-family: "Courier New"; -fx-font-weight: bold;
+}
+
+/* ── Focus screen — narrower window ── */
+.focus-screen-root {
+    -fx-pref-width: 360px;
+    -fx-pref-height: 620px;
+}
+
+/* ── Big timer text ── */
+.timer-text-big {
+    -fx-text-fill: #e8b870;
+    -fx-font-size: 46px;
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold;
+}
+.break-timer-text-big {
+    -fx-text-fill: #a0c8e0;
+    -fx-font-size: 46px;
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold;
+}
+
+/* ── Task scroll pane ── */
+.task-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+.task-scroll .viewport {
+    -fx-background-color: transparent;
+}
+.task-scroll .scroll-bar:vertical {
+    -fx-background-color: #1e1408;
+    -fx-pref-width: 6px;
+}
+.task-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #5a4030;
+    -fx-background-radius: 3px;
+}
+.task-scroll .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+.task-scroll .corner {
+    -fx-background-color: transparent;
+}
+
+/* ── Audio controls ── */
+.audio-bar {
+    -fx-padding: 5 0 0 0;
+    -fx-border-color: #1e1408 transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.audio-track {
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 10px;
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold;
+}
+.audio-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #3a2a18;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-padding: 0 4 0 4;
+}
+.audio-btn:hover { -fx-text-fill: #c8904a; }
+.audio-slider {
+    -fx-pref-height: 12px;
+}
+.audio-slider .track {
+    -fx-background-color: #1e1408;
+    -fx-pref-height: 3px;
+}
+.audio-slider .thumb {
+    -fx-background-color: #5a4030;
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-background-radius: 5px;
+}
+.audio-slider:hover .thumb {
+    -fx-background-color: #c8904a;
+}

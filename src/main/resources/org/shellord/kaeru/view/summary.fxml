@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.shellord.kaeru.controller.SummaryController"
+      styleClass="screen-root"
+      spacing="0">
+
+    <!-- animated pixel art scene header (dusk — session complete) -->
+    <Canvas fx:id="summaryCanvas" width="480" height="80"/>
+
+    <!-- body -->
+    <VBox styleClass="body-pad" spacing="8">
+        <padding><Insets top="8" right="8" bottom="8" left="8"/></padding>
+
+        <Label text="session done ✓" styleClass="summary-title"/>
+
+        <!-- 2x2 stats grid -->
+        <GridPane hgap="5" vgap="5">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+                <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+            </columnConstraints>
+
+            <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label fx:id="focusedLabel" text="—" styleClass="stat-card-val"/>
+                <Label text="focused"               styleClass="stat-card-lbl"/>
+            </VBox>
+            <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label fx:id="tasksLabel"  text="—" styleClass="stat-card-val"/>
+                <Label text="tasks"                 styleClass="stat-card-lbl"/>
+            </VBox>
+            <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label fx:id="todayLabel"  text="—" styleClass="stat-card-val"/>
+                <Label text="today"                 styleClass="stat-card-lbl"/>
+            </VBox>
+            <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label fx:id="roundsLabel" text="—" styleClass="stat-card-val"/>
+                <Label text="rounds"                styleClass="stat-card-lbl"/>
+            </VBox>
+        </GridPane>
+
+        <!-- task summary -->
+        <Label text="tasks this session" styleClass="slabel"/>
+        <VBox fx:id="taskSummaryList" spacing="3"/>
+
+        <!-- buttons -->
+        <HBox spacing="6">
+            <Button text="▶ new session" onAction="#onNewSessionClick"
+                    styleClass="start-btn" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button text="↺ repeat"      onAction="#onRepeatClick"
+                    styleClass="sec-btn"  HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        </HBox>
+
+    </VBox>
+</VBox>
