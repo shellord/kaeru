@@ -9,6 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.shellord.kaeru.model.Task;
 import org.shellord.kaeru.model.TimerModel;
+import org.shellord.kaeru.util.MenuBarApp;
 import org.shellord.kaeru.util.SceneManager;
 
 import java.net.URL;
@@ -202,6 +203,11 @@ public class SetupController implements Initializable {
             scroll.setStyle("-fx-background: transparent; -fx-background-color: transparent;");
             taskListContainer.getChildren().add(scroll);
         }
+    }
+
+    @FXML
+    private void onQuitClick() {
+        MenuBarApp.quit();
     }
 
     @FXML

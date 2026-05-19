@@ -2,6 +2,7 @@ module org.shellord.kaeru {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.media;
+    requires java.desktop;
 
     // open to javafx.fxml so it can access controllers via reflection
     opens org.shellord.kaeru             to javafx.fxml;

@@ -74,5 +74,10 @@
                 styleClass="start-btn"
                 maxWidth="Infinity"/>
 
+        <Button text="quit kaeru"
+                onAction="#onQuitClick"
+                styleClass="quit-link"
+                maxWidth="Infinity"/>
+
     </VBox>
 </VBox>

@@ -166,6 +166,17 @@
 .start-btn:hover  { -fx-background-color: #3a2a14; }
 .start-btn:pressed { -fx-scale-x: 0.98; -fx-scale-y: 0.98; }
 
+.quit-link {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #7a6048;
+    -fx-font-size: 11px;
+    -fx-font-family: "Courier New";
+    -fx-padding: 2 0 2 0;
+    -fx-cursor: hand;
+}
+.quit-link:hover { -fx-text-fill: #c8904a; }
+
 /* ── Secondary button ── */
 .sec-btn {
     -fx-background-color: #120e08;

@@ -31,6 +31,7 @@ public class SceneManager {
     // ── Screen navigation ──
 
     public static void showSetup() {
+        MenuBarApp.detachTimer();
         loadScene("/org/shellord/kaeru/view/setup.fxml", "Kaeru Focus");
         stage.setWidth(480);
         stage.setHeight(560);
@@ -42,15 +43,19 @@ public class SceneManager {
         loadScene("/org/shellord/kaeru/view/focus.fxml", "Kaeru Focus — Session");
         stage.setWidth(360);
         stage.setHeight(660);
+        MenuBarApp.attachTimer(model);
     }
 
     public static void showSummary() {
         if (timerModel != null) {
             todayFocusSeconds += timerModel.getFocusSecondsAccum();
         }
+        MenuBarApp.detachTimer();
         loadScene("/org/shellord/kaeru/view/summary.fxml", "Kaeru Focus — Done");
         stage.setWidth(480);
         stage.setHeight(560);
+        // Auto-surface so the user actually sees the session-done view.
+        MenuBarApp.showPopup();
     }
 
     private static void loadScene(String fxmlPath, String title) {
